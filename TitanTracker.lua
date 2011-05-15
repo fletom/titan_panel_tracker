@@ -4,10 +4,6 @@ local TT = TitanTracker
 TT.id = 'Tracker'
 TT.addon = 'TitanTracker'
 
-TT.button_label = TT.id..': '
-TT.menu_text = TT.id
-TT.tooltip_header = 'Titan Panel [Tracker]'
-
 TT.version = tostring(GetAddOnMetadata(TT.addon, 'Version')) or 'Unknown'
 TT.author = GetAddOnMetadata(TT.addon, 'Author') or 'Unknown'
 
@@ -16,9 +12,9 @@ function TT.Button_OnLoad(self)
 		id = TT.id,
 		version = TT.version,
 		category = 'General',
-		menuText = TT.menu_text,
+		menuText = 'Tracker',
 		buttonTextFunction = 'TitanTracker_GetButtonText', 
-		tooltipTitle = TT.tooltip_header,
+		tooltipTitle = 'Titan Panel [Tracker]',
 		tooltipTextFunction = 'TitanTracker_GetTooltipText', 
 		icon = 'Interface\\ICONS\\Ability_Hunter_Pathfinding',
 		iconWidth = 16,
@@ -61,7 +57,7 @@ function TT.Button_OnEvent(self, event, ...)
 end
 
 function TitanTracker_GetButtonText(id)
-	return TT.button_label, TT.GetTrackingInfo()
+	return 'Tracker: ', TT.GetTrackingInfo()
 end
 
 function TitanTracker_GetTooltipText()
