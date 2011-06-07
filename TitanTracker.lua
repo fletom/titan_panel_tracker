@@ -33,23 +33,22 @@ function TT.Button_OnLoad(self)
 		}
 	}
 	
-	self:RegisterEvent("MINIMAP_UPDATE_TRACKING")
-	self:RegisterEvent("PLAYER_ENTERING_WORLD")
+	self:RegisterEvent('MINIMAP_UPDATE_TRACKING')
+	self:RegisterEvent('PLAYER_ENTERING_WORLD')
 end
 
 function TT.Button_OnEvent(self, event, ...)
-	if (event == "MINIMAP_UPDATE_TRACKING") then
+	if (event == 'MINIMAP_UPDATE_TRACKING') then
 		TitanPanelPluginHandle_OnUpdate({'Tracker', TITAN_PANEL_UPDATE_BUTTON})
 	end
-	if (event == "PLAYER_ENTERING_WORLD") then
+	if (event == 'PLAYER_ENTERING_WORLD') then
 		-- We need to do this because of a bug in Blizzard's source that
 		-- calls UIDropDownMenu_Refresh() upon MINIMAP_UPDATE_TRACKING,
 		-- wiping any UIDropDownMenu that is open at the time. Since we
 		-- have keepShownOnClick = true for our buttons, we must stop that
 		-- from happening.
 		-- See: http://us.battle.net/wow/en/forum/topic/2522463631
-		
-		MiniMapTrackingButton:UnregisterEvent("MINIMAP_UPDATE_TRACKING")
+		MiniMapTrackingButton:UnregisterEvent('MINIMAP_UPDATE_TRACKING')
 		
 		-- Should this be a user option?
 		MiniMapTrackingButton:Hide()

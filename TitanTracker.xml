@@ -11,9 +11,9 @@
 					</OnLoad>
 					<OnEvent>
 						TitanTracker.Button_OnEvent(self, event, ...);
-					</OnEvent>				
+					</OnEvent>
 				</Scripts>
 			</Button>
 		</Frames>
-	</Frame>		
+	</Frame>
 </Ui>
