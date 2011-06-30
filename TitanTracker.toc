@@ -6,7 +6,7 @@
 ## SavedVariables: 
 ## OptionalDeps: 
 ## Dependencies: Titan
-## Version: 1.2
+## Version: 1.4
 ## X-Child-Of: Titan
 
 TitanTracker.xml
