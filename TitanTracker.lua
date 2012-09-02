@@ -49,9 +49,6 @@ function TT.Button_OnEvent(self, event, ...)
 		-- from happening.
 		-- See: http://us.battle.net/wow/en/forum/topic/2522463631
 		MiniMapTrackingButton:UnregisterEvent('MINIMAP_UPDATE_TRACKING')
-		
-		-- Should this be a user option?
-		MiniMapTrackingButton:Hide()
 	end
 end
 
