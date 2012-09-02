@@ -1,4 +1,4 @@
-## Interface: 40300
+## Interface: 50001
 ## Title: Titan Panel [|cffeda55fTracker|r]
 ## Notes: A Titan Panel plugin that replaces the minimap tracking button.
 ## Author: Fletcher Tomalty ( http://nomulous.com/ )
